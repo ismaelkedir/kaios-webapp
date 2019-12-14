@@ -1,0 +1,25 @@
+{
+    "name": "kaios-webapp",
+    "displayName": "KaiOS .Webapp",
+    "description": "Language support for manifest.webapp file inside KaiOS projects",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "webapp",
+            "aliases": ["Webapp", "webapp"],
+            "extensions": [".webapp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "webapp",
+            "scopeName": "manifest.webapp",
+            "path": "./syntaxes/webapp.tmLanguage.json"
+        }]
+    }
+}
