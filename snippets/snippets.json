@@ -1,0 +1,207 @@
+{
+  "A human-readable name for the app. Maximum length is 20 characters.": {
+    "prefix": ["name"],
+    "body": [
+      "\"name\": \"${1:Hello World}\""
+    ]
+  },
+  "A specialized string that represents the version of the app. Must be integers separated by dots.": {
+    "prefix": ["version"],
+    "body": [
+      "\"version\": \"${1:0.0.1}\""
+    ]
+  },
+  "A human-readable description for the app. It should be a short and strong message.": {
+    "prefix": ["description"],
+    "body": [
+      "\"description\": \"${1:A Hello World App}\""
+    ]
+  },
+  "Add icon sets": {
+    "prefix": ["icons"],
+    "body": [
+      "\"icons\": {",
+      "\t\"16\": \"\/icons\/icon16x16.png\",",
+      "\t\"48\": \"\/icons\/icon48x48.png\",",
+      "\t\"60\": \"\/icons\/icon60x60.png\",",
+      "\t\"128\": \"\/icons\/icon128x128.png\"",
+      "}"
+    ],
+    "description": "Remember that internal paths to icons must be absolute from the app's origin, while paths to externally hosted icons must be fully qualified.\n Icons must be square and in .png format. Icons should not have solid backgrounds that extend to all four corners of the icon."
+  },
+  "Information about developer": {
+    "prefix": ["developer"],
+    "body": [
+      "\"developer\": {",
+      "\t\"name\": \"${1:Your Name}\",",
+      "\t\"url\": \"${2:http://yourawesomeapp.com}\",",
+      "}"
+    ],
+    "description": "name: The name of the developer. Required for all app manifests.\n url: The URL of a website containing information about the app's developer. Optional."
+  },
+  "A map of one or more language-specific overrides of the field values in your app manifest.": {
+    "prefix": ["locale"],
+    "body": [
+      "\"locales\": {",
+      "\t\"${1:en-US}\": {",
+      "\t\t\"name\": \"${1:KaiOS App}\",",
+      "\t\t\"subtitle\": \"${2:Short description of your app}\",",
+      "\t\t\"description\": \"${3:Brief description about your app}\"",
+      "}"
+    ],
+    "description": ""
+  },
+  "Add default locale": {
+    "prefix": ["defaultLocale"],
+    "body": [
+      "\"default_locale\": \"${1:en-US}\""
+    ]
+  },
+  "The app's type, which defines its level of access to sensitive device APIs. If you do not define type, it will default to web as the type.": {
+    "prefix": ["type"],
+    "body": [
+      "\"type\": \"${1|web,privileged|}\""
+    ],
+    "description": "web: A regular hosted app. This type has the least access to APIs.\n privileged: An authenticated app that has been approved by an app store such as the KaiStore. This type has greater access to APIs than a web app."
+  },
+  "App subtitle": {
+    "prefix": ["subtitle"],
+    "body": [
+      "\"subtitle\": \"${1:Short description of your app}\""
+    ],
+    "description": "Your app’s subtitle appears below your app name throughout the KaiStore. A subtitle is a short and striking or memorable message, and is intended to summarize your app in a concise phrase. A compelling subtitle can encourage product page views and installs. The maximum length of a subtitle is 40 characters."
+  },
+  "Add app categories": {
+    "prefix": ["categories"],
+    "body": [
+      "\"categories\": [",
+      "\t\"${1|social,games,utilities,life style,entertainment,health,sports,book/reference|}\",",
+      "\t\"${2|social,games,utilities,life style,entertainment,health,sports,book/reference|}\",",
+      "]"
+    ]
+  },
+  "A human-readable name for the app. Can differ from name field.": {
+    "prefix": ["shortName"],
+    "body": [
+      "\"short_name\": \"${1:Short Name}\""
+    ]
+  },
+  "A map of background images sizes to URIs of the icons.": {
+    "prefix": ["bgs"],
+    "body": [
+      "\"bgs\": {",
+      "\t\"56\": \"${1:/img/ic_Appname_56.png},",
+      "\t\"112\": \"${2:/img/ic_Appname_112.png},",
+      "}"
+    ]
+  },
+  "Application origin": {
+    "prefix": ["origin"],
+    "body": [
+      "\"origin\": \"${1:app://mywebapp.com}\""
+    ],
+    "description": "Packaged apps have a special internal protocol of app://UUID where UUID is a string unique to each device the app is installed on. UUID is not easily accessible at this time. The origin field allows you to replace this UUID value with a single domain name that will be used by each installed app."
+  },
+  "The user permissions for sensitive device APIs that your app needs, for example, access to the user's Contacts.": {
+    "prefix": ["permissions"],
+    "body": [
+      "\"permissions\": {",
+      "\t\"${1:contact}\": {",
+      "\t\t\"description\": \"${2:Required for autocompletion in the share screen}\"",
+      "\t\t\"access\": \"${3:readcreate}\",",
+      "}"
+    ],
+    "description": "Each permission requires:\n name: the name of the permission\n description: the reason why your app needs to use this permission\n access: the level of access required, options being readonly, readwrite, readcreate, and createonly. Only a few APIs need this"
+  },
+  "A control that tells the runtime whether or not to launch the app in full-screen mode.": {
+    "prefix": ["fullscreen"],
+    "body": [
+      "\"fullscreen\": ${1:true}"
+    ]
+  },
+  "When making use of the Data Store API, the app that owns the data store MUST include the datastores-owned field in its manifest to claim ownership.": {
+    "prefix": ["datastoresOwned"],
+    "body": [
+      "\"datastores-owned\": {",
+      "\t\"${1:myData}\": {",
+      "\t\t\"access\": \"${2:readwrite}\"",
+      "\t\t\"description\": \"${3:my data store}\",",
+      "}"
+    ],
+    "description": "You can include multiple properties to represent different data stores, and each one can use an access of readonly/readwrite to specify whether the data store can be read/modified by other applications. A description is also included to describe the purpose of the data store."
+  },
+  "When making use of the Data Store API, any non-owner app that wants access to the the data store MUST include the datastores-access field in its manifest.": {
+    "prefix": ["datastoresAccess"],
+    "body": [
+      "\"datastores-access\": {",
+      "\t\"${1:myData}\": {",
+      "\t\t\"access\": \"${2:readwrite}\"",
+      "\t\t\"description\": \"${3:Read and modify my data store}\",",
+      "}"
+    ],
+    "description": ""
+  },
+  "The system messages you allow the app to capture, and the pages in your app that will display when those messages occur.": {
+    "prefix": ["messages"],
+    "body": [
+      "\"${1:messages}\": {",
+      "\t\"notification\": \"${2:/index.html}\"",
+      "}"
+    ],
+    "description": ""
+  },
+  "The internal URLs your app uses to handle external processes.": {
+    "prefix": ["redirects"],
+    "body": [
+      "\"redirects\": [",
+      "\t{",
+      "\t\t\"from\": \"${2:http://facebook.com/authentication/success.html}\"",
+      "\t\t\"to\": \"${2:/app/main_interface.html}\"",
+      "\t}",
+      "]"
+    ],
+    "description": ""
+  },
+  "A set of Web Activities that your app supports (full list).": {
+    "prefix": ["activities"],
+    "body": [
+      "\"activities\": {",
+      "\t\"${1:share}\": {",
+      "\t\t\"filters\": {",
+      "\t\t\t\"type\": [ ${2:\"image\/png\", \"image\/gif\"} ]",
+      "\t},",
+      "\t\"${3:href}\": \"${4:foo.html}\",",
+      "\t\"${5:disposition}\": \"${6:window}\",",
+      "\t\"${7:returnValue}\": ${8:true}",
+      "\t}",
+      "}"
+    ],
+    "description": "The object for the share activity in the example has filters, href, disposition and returnValue properties. These are described in Activity handler description."
+  },
+  "The path to JavaScript files containing asm.js code that you want compiled at install time.": {
+    "prefix": ["precompile"],
+    "body": [
+      "\"precompile\": [",
+      "\t\t\"${1:game.js}\"",
+      "\t\t\"${2:database.js}\"",
+      "\t]"
+    ],
+    "description": "Compilation at install time makes the installation process longer, but reduces the time it takes to start up an app."
+  },
+  "The positioning at which the application will stay locked.": {
+    "prefix": ["orientation"],
+    "body": [
+      "\"orientation\": [",
+      "\t\"${1|portrait-primary,portrait-secondary,portrait,landscape-primary,landscape-secondary,landscape|}\"",
+      "]"
+    ],
+    "description": ""
+  },
+  "This field can be used to define a Content Security Policy (CSP) that is applied to all pages in the app. The policies you can add to a CSP are listed in CSP policy directives, and for an app you'll need to include them in a line like so": {
+    "prefix": ["csp"],
+    "body": [
+      "\"csp\" : \"default-src *; script-src 'self'; object-src 'none'; style-src 'self' ${1|'unsafe-inline', ''|}\""
+    ],
+    "description": ""
+  }
+}
