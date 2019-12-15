@@ -1,25 +1,45 @@
 {
-    "name": "kaios-webapp",
-    "displayName": "KaiOS .Webapp",
-    "description": "Language support for manifest.webapp file inside KaiOS projects",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.41.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "kaios-webapp",
+  "displayName": "KaiOS Manifest",
+  "description": "Language support and code snippets for KaiOS app manifest files",
+  "version": "0.0.1",
+  "publisher": "IsmaelKedir",
+  "repository": {
+    "url": "https://github.com/ismaelkedir/kaios-webapp"
+  },
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "webapp",
+        "aliases": [
+          "Webapp",
+          "webapp"
+        ],
+        "extensions": [
+          ".webapp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "webapp",
-            "aliases": ["Webapp", "webapp"],
-            "extensions": [".webapp"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "webapp",
-            "scopeName": "manifest.webapp",
-            "path": "./syntaxes/webapp.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "webapp",
+        "scopeName": "manifest.webapp",
+        "path": "./syntaxes/webapp.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "webapp",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
 }
