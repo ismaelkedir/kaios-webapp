@@ -66,10 +66,31 @@ Added features X, Y, and Z.
 **Enjoy!** 
 -->
 
-# KaiOS manifest.webapp file support extension for VSCode
+# KaiOS Manifest Support - VSCode Extension
 
-This is an extension for Visual Studio Code to enable syntax highlighting and autocompletion when working on maninfest.webapp files in KaiOS projects
+This is an extension that makes your KaiOS app development faster by giving you code completion and description of configuration keys inside your `manifest.webapp` files.
 
 ## Features
-- Syntax Highlighting
-- Autoclosing brackets and quotes
+- Syntax highlighting
+- Code completion
+- Quick suggestions
+- Description of key-value pairs from KaiOS documentation
+
+
+## Release Notes
+
+### 0.0.1
+- Initial release with .webapp file support and syntax highlighting
+
+### 1.0.0
+- Added code completion and snippets for KaiOS manifest file
+- Included descriptions of manifest file keywords from [KaiOS documentation](https://developer.kaiostech.com/getting-started/main-concepts/manifest)
+
+-----------------------------------------------------------------------------------------------------------
+
+
+### Developer
+
+* [Ismael Kedir](https://github.com/ismaelkedir)
+
+**Enjoy!** 
