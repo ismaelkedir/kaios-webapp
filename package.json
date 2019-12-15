@@ -1,5 +1,5 @@
 {
-  "name": "kaios-manifest-support",
+  "name": "kaios-webapp",
   "displayName": "KaiOS Manifest Support",
   "description": "This is an extension that makes your KaiOS app development faster by giving you code completion and description of configuration keys inside your `manifest.webapp` files.",
   "version": "1.0.0",
