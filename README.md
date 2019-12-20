@@ -18,6 +18,10 @@ This is an extension that makes your KaiOS app development faster by giving you 
 - Added code completion and snippets for KaiOS manifest file
 - Included descriptions of manifest file keywords from [KaiOS documentation](https://developer.kaiostech.com/getting-started/main-concepts/manifest)
 
+### 1.0.1
+- Fixed some typos inside snippets
+- Added extension icon
+- Added more snippets
 -----------------------------------------------------------------------------------------------------------
 
 
