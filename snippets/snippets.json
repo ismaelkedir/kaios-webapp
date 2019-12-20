@@ -90,8 +90,8 @@
     "prefix": ["bgs"],
     "body": [
       "\"bgs\": {",
-      "\t\"56\": \"${1:/img/ic_Appname_56.png},",
-      "\t\"112\": \"${2:/img/ic_Appname_112.png},",
+      "\t\"56\": \"${1:/img/ic_Appname_56.png}\",",
+      "\t\"112\": \"${2:/img/ic_Appname_112.png}\",",
       "}"
     ]
   },
@@ -135,7 +135,7 @@
     "body": [
       "\"datastores-access\": {",
       "\t\"${1:myData}\": {",
-      "\t\t\"access\": \"${2:readwrite}\"",
+      "\t\t\"access\": \"${2:readwrite}\",",
       "\t\t\"description\": \"${3:Read and modify my data store}\",",
       "}"
     ],
@@ -155,7 +155,7 @@
     "body": [
       "\"redirects\": [",
       "\t{",
-      "\t\t\"from\": \"${2:http://facebook.com/authentication/success.html}\"",
+      "\t\t\"from\": \"${2:http://facebook.com/authentication/success.html}\",",
       "\t\t\"to\": \"${2:/app/main_interface.html}\"",
       "\t}",
       "]"
@@ -182,7 +182,7 @@
     "prefix": ["precompile"],
     "body": [
       "\"precompile\": [",
-      "\t\t\"${1:game.js}\"",
+      "\t\t\"${1:game.js}\",",
       "\t\t\"${2:database.js}\"",
       "\t]"
     ],
@@ -201,6 +201,13 @@
     "prefix": ["csp"],
     "body": [
       "\"csp\" : \"default-src *; script-src 'self'; object-src 'none'; style-src 'self' ${1|'unsafe-inline', ''|}\""
+    ],
+    "description": ""
+  },
+  "App with this setting will have the feature of emulated cursor just as browser tab does.": {
+    "prefix": ["cursor"],
+    "body": [
+      "\"cursor\" : ${1:true}"
     ],
     "description": ""
   }
