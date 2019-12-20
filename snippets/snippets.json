@@ -210,5 +210,13 @@
       "\"cursor\" : ${1:true}"
     ],
     "description": ""
+  },
+  "": {
+    "prefix": ["ime_default_softkey_bar"],
+    "body": [
+      "\"ime_default_softkey_bar\" : ${1:true}"
+    ],
+    "description": "Another important issue to solve was the fact, that once in text edit mode, it was impossible to leave. \t Turns out, that is also very easy to fix with the \"ime_default_softkey_bar\": true parameter in the manifest.webapp file."
   }
+  
 }
